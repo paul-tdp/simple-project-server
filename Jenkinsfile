@@ -11,12 +11,12 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn package -DskipTests'
-                sh 'docker build -t="paulgirtavic/docker/simple-project:latest" .'
+                sh 'docker build -t="paulgirtavic/simple-project:latest" .'
                 }
             }
         stage('Deploy') {
             steps {
-                sh 'docker push paulgirtavic/docker/simple-project:latest'
+                sh 'docker push paulgirtavic/simple-project:latest'
             }
         }
     }
