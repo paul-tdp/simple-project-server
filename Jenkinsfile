@@ -16,7 +16,7 @@ pipeline {
             }
         stage('Deploy') {
             steps {
-                'docker push paulgirtavic/simple-project:latest' 
+                echo "hello"
             }
         }
     }
