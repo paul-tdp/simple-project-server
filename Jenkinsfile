@@ -16,7 +16,8 @@ pipeline {
             }
         stage('Build') {
             steps {
-                echo "hello"
+                sh 'mvn package -DskipTests'
+                sh 'docker build -t="paulgirtavic/simple-project:${VERSION}" .'
                 }
             }
         stage('Deploy') {
