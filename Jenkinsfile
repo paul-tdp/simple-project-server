@@ -2,10 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Testing Environment') {
+        stage('Test') {
             steps {
-                    sh 'mvn test -Dtest=ControllerAndServiceSuite'
-                    sh 'mvn test -Dtest=IntegrationSuite'
+                    echo "hello"
                 }
             }
         stage('Build') {
@@ -18,5 +17,22 @@ pipeline {
                 echo "hello"
             }
         }
+          stage('Testing Environment') {
+            steps {
+                    sh 'mvn test -Dtest=ControllerAndServiceSuite'
+                    sh 'mvn test -Dtest=IntegrationSuite'
+            }
+        }
+      stage('Staging') {
+            steps {
+                echo "hello"
+            }
+        }
+      stage('Production') {
+            steps {
+                echo "hello"
+            }
+        }
+    
     }
 }
