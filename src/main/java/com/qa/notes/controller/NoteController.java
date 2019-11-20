@@ -37,17 +37,17 @@ public class NoteController {
 		return new ArrayList<NoteDto>(service.getNotes());
 	}
 	
-//	@RequestMapping(path = "note/", method = {RequestMethod.POST})
-//	@ResponseStatus(code = HttpStatus.CREATED)
-//	public NoteDto createNote(@RequestBody NoteDto note){
-//		return service.createNote(note);
-//	}
-//	
-//	@RequestMapping(path = "note/", method = {RequestMethod.PUT})
-//	@ResponseStatus(code = HttpStatus.OK)
-//	public NoteDto updateNote(@RequestBody NoteDto note) throws NotFoundException{
-//		return service.updateNote(note);
-//	}
+	@RequestMapping(path = "note/", method = {RequestMethod.POST})
+	@ResponseStatus(code = HttpStatus.CREATED)
+	public NoteDto createNote(@RequestBody NoteDto note){
+		return service.createNote(note);
+	}
+	
+	@RequestMapping(path = "note/", method = {RequestMethod.PUT})
+	@ResponseStatus(code = HttpStatus.OK)
+	public NoteDto updateNote(@RequestBody NoteDto note) throws NotFoundException{
+		return service.updateNote(note);
+	}
 	
 	@RequestMapping(path = "note/{id}", method = {RequestMethod.DELETE})
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
