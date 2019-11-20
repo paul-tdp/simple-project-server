@@ -19,15 +19,6 @@ pipeline {
                 sh 'docker push paulgirtavic/simple-project:latest'
             }
         }
-        
-        
-        
-        
-          stage('Testing Environment') {
-            steps {
-                echo "hello"
-            }
-        }
       stage('Staging') {
             steps {
                 echo "hello"
@@ -38,11 +29,6 @@ pipeline {
                 echo "hello"
             }
         }
-    
-        
-        
-        
-        
-        
+ 
     }
 }
